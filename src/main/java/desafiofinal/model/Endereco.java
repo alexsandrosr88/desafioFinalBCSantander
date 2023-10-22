@@ -41,4 +41,14 @@ public class Endereco {
         cidade = enderecoViaCepDTO.getLocalidade();
         estado = enderecoViaCepDTO.getUf();
     }
+    public Endereco(Endereco endereco){
+        id = endereco.getId();
+        cep = endereco.getCep();
+        logradouro = endereco.getLogradouro();
+        numero = endereco.getNumero();
+        complemento = endereco.getComplemento();
+        bairro = endereco.getBairro();
+        cidade = endereco.getCidade();
+        estado = endereco.getEstado();
+    }
 }

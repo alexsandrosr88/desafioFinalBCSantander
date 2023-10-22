@@ -23,22 +23,11 @@ public class Contato {
     @OneToOne(cascade = CascadeType.ALL)
     private Endereco endereco;
 
-    public Contato(ContatoRequestDTO contatoRequestDTO){
-        nome = contatoRequestDTO.getNome();
-        cpf = contatoRequestDTO.getCpf();
-        telefone = contatoRequestDTO.getTelefone();
-        email = contatoRequestDTO.getEmail();
-        endereco = new Endereco(contatoRequestDTO.getEndereco());
+    public Contato(ContatoRequestDTO contatoPOSTDTO){
+        nome = contatoPOSTDTO.getNome();
+        cpf = contatoPOSTDTO.getCpf();
+        telefone = contatoPOSTDTO.getTelefone();
+        email = contatoPOSTDTO.getEmail();
+        endereco = new Endereco(contatoPOSTDTO.getEndereco());
     }
-
-    public Contato (Contato contato){
-        nome = contato.getNome();
-        cpf = contato.getCpf();
-        telefone = contato.getTelefone();
-        email = contato.getEmail();
-        endereco.setCep(contato.getEndereco().getCep());
-        endereco.setNumero(contato.getEndereco().getNumero());
-        endereco.setComplemento(contato.getEndereco().getComplemento());
-    }
-
 }
