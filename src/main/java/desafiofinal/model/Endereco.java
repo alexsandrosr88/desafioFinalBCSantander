@@ -1,6 +1,6 @@
 package desafiofinal.model;
 
-import desafiofinal.dto.EnderecoPostDTO;
+import desafiofinal.dto.EnderecoRequestDTO;
 import desafiofinal.dto.EnderecoViaCepDTO;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -28,10 +28,10 @@ public class Endereco {
     @Column(length = 2)
     private String estado;
 
-    public Endereco(EnderecoPostDTO enderecoPostDTO){
-        cep = enderecoPostDTO.getCep();
-        numero = enderecoPostDTO.getNumero();
-        complemento = enderecoPostDTO.getComplemento();
+    public Endereco(EnderecoRequestDTO enderecoRequestDTO){
+        cep = enderecoRequestDTO.getCep();
+        numero = enderecoRequestDTO.getNumero();
+        complemento = enderecoRequestDTO.getComplemento();
     }
 
     public Endereco(EnderecoViaCepDTO enderecoViaCepDTO){

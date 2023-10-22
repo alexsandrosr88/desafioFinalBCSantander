@@ -9,4 +9,7 @@ import java.io.Serial;
 public class RecursoNaoEncontrado extends RuntimeException {
     @Serial
     private static final long serialVersionUID = 1L;
+    public RecursoNaoEncontrado(){
+        super("Contato não encontrado!");
+    }
 }

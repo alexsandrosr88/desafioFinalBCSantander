@@ -2,14 +2,12 @@ package desafiofinal.dto;
 
 import lombok.Data;
 
-import java.util.Set;
-
 @Data
-public class ContatoPostDTO {
+public class ContatoRequestDTO {
     private String nome;
     private String cpf;
     private String telefone;
     private String email;
-    private EnderecoPostDTO endereco;
+    private EnderecoRequestDTO endereco;
 
 }

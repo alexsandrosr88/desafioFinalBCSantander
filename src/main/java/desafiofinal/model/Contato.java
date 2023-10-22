@@ -1,11 +1,9 @@
 package desafiofinal.model;
 
-import desafiofinal.dto.ContatoPostDTO;
+import desafiofinal.dto.ContatoRequestDTO;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.util.Set;
 
 @Data
 @NoArgsConstructor
@@ -25,12 +23,22 @@ public class Contato {
     @OneToOne(cascade = CascadeType.ALL)
     private Endereco endereco;
 
-    public Contato(ContatoPostDTO contatoPostDTO){
-        nome = contatoPostDTO.getNome();
-        cpf = contatoPostDTO.getCpf();
-        telefone = contatoPostDTO.getTelefone();
-        email = contatoPostDTO.getEmail();
-        endereco = new Endereco(contatoPostDTO.getEndereco());
+    public Contato(ContatoRequestDTO contatoRequestDTO){
+        nome = contatoRequestDTO.getNome();
+        cpf = contatoRequestDTO.getCpf();
+        telefone = contatoRequestDTO.getTelefone();
+        email = contatoRequestDTO.getEmail();
+        endereco = new Endereco(contatoRequestDTO.getEndereco());
+    }
+
+    public Contato (Contato contato){
+        nome = contato.getNome();
+        cpf = contato.getCpf();
+        telefone = contato.getTelefone();
+        email = contato.getEmail();
+        endereco.setCep(contato.getEndereco().getCep());
+        endereco.setNumero(contato.getEndereco().getNumero());
+        endereco.setComplemento(contato.getEndereco().getComplemento());
     }
 
 }
