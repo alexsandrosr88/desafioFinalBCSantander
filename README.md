@@ -21,7 +21,7 @@ A proposta do desafio criar uma API Restful com base nos conhecimentos adquirido
 
 # URL para teste
 
-http://localhost:8080/swagger-ui/index.html
+http://desafiofinalbcsantander-prod.up.railway.app/swagger-ui/index.html
 
 # Provedora do Curso
 
