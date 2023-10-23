@@ -5,7 +5,7 @@
 A proposta do desafio criar uma API Restful com base nos conhecimentos adquiridos no bootcamp.
 
 ## Minha proposta
-Uma API para gerenciador contatos e aproveita e aproveitar o consumo da API VIA CEP.
+Desenvolvi uma API RESTful para o gerenciamento de contatos, aprimorando a experiência de integração com a API VIA CEP.
 
 # Design Pattern trabalhados
 - Singleton
