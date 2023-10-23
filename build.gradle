@@ -43,6 +43,13 @@ dependencyManagement {
 	}
 }
 
+tasks.jar{
+	manifest {
+		attributes["Main-Class"] = "desafiofinal.Application"
+	}
+}
+
+
 tasks.named('test') {
 	useJUnitPlatform()
 }
